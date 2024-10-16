@@ -28,6 +28,15 @@ namespace GrupoAEducacao.Domain.Repositories
 
             return student;
         }
+        
+        public async Task<int> AddStudentAsync(Student student)
+        {
+            _context.Students.Add(student);
+
+            await _context.SaveChangesAsync();
+
+            return student.Id;
+        }
 
         public async Task<int> EditStudentAsync(Student student)
         {

@@ -11,6 +11,7 @@ namespace GrupoAEducacao.Business.Interfaces
     {
         public Task<List<StudentDto>> ListAllStudents();
         public Task<StudentDto> GetStudentAsync(int id);
+        public Task<int> AddStudentAsync(StudentDto studentDto);
         public Task<int> EditStudentAsync(StudentDto studentDto);
         public Task<bool> DeleteStudentAsync(int id);
     }

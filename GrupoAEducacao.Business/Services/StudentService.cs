@@ -43,6 +43,13 @@ namespace GrupoAEducacao.Business.Services
             return studentDto;
         }
 
+        public async Task<int> AddStudentAsync(StudentDto studentDto)
+        {
+            var student = MapStudentDtoToEntity(studentDto);
+
+            return await _studentRepository.AddStudentAsync(student);
+        }
+
         public async Task<int> EditStudentAsync(StudentDto studentDto)
         {
             var student = MapStudentDtoToEntity(studentDto);
