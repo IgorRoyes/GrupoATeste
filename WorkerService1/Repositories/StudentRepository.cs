@@ -24,7 +24,7 @@ namespace GrupoAEducacao.Domain.Repositories
             var student = await _context.Students.FindAsync(id);
 
             if (student == null) 
-                return new Student(); //Igor: Implementar Excessão
+                return new Student();
 
             return student;
         }
@@ -52,7 +52,7 @@ namespace GrupoAEducacao.Domain.Repositories
             var student = await _context.Students.FindAsync(id);
 
             if (student == null)
-                return false; //Igor: Implementar Excessão
+                return false; 
 
             _context.Students.Remove(student);
             await _context.SaveChangesAsync();

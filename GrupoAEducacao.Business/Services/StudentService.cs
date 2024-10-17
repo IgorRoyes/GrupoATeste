@@ -78,7 +78,7 @@ namespace GrupoAEducacao.Business.Services
         {
             return new Student()
             {
-                Id = studentDto.Id,
+                Id = studentDto.Id.Value,
                 Name = studentDto.Name,
                 Email = studentDto.Email,
                 AcademicRegister = studentDto.AcademicRegister,
